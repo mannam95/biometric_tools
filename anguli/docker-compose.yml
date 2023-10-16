@@ -1,0 +1,14 @@
+version: '3'
+services:
+  anguli-tool:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: anguli-con
+    image: anguli-img
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    volumes:
+      # - "local-path:/container-path"
+      - "/home/srinath/Downloads/ssh_data/Anguli/anguli-data/:/anguli-data"
